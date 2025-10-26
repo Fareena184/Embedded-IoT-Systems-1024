@@ -23,16 +23,17 @@ An **OLED display** shows the current state of the LED or buzzer, providing clea
 
 ---
 
-## Main Components and Technologies
+## Pin Map
 
-| Component | Description |
-|------------|-------------|
-| **ESP32** | Main microcontroller used for button detection and output control |
-| **Push Button** | Acts as input for short and long press detection |
-| **LED** | Visual indicator toggled via button press |
-| **Buzzer** | Produces sound when a long press is detected |
-| **OLED Display (SSD1306)** | Displays messages such as “LED ON”, “LED OFF”, and “BUZZER ON” |
-| **Arduino IDE** | Used for programming, compiling, and uploading the ESP32 sketch |
+| **Component** | **ESP32 Pin** | **Description** |
+|----------------|---------------|-----------------|
+| **LED** | **GPIO 18** | Output pin used to toggle LED on short press |
+| **Push Button** | **GPIO 34** | Input pin with internal pull-up for detecting short and long presses |
+| **Buzzer** | **GPIO 25** | Output pin used to generate tone on long press |
+| **OLED SDA** | **GPIO 21** | I²C data line for OLED communication |
+| **OLED SCL** | **GPIO 22** | I²C clock line for OLED communication |
+| **VCC** | **3.3V** | Power supply for OLED and other peripherals |
+| **GND** | **GND** | Common ground connection for all components |
 
 ---
 
