@@ -19,16 +19,20 @@ The system is implemented using the **ESP32** microcontroller and uses **non-blo
 
 ---
 
-##  Main Components and Technologies
+## Pin Map
 
-| Component | Description |
-|------------|-------------|
-| **ESP32** | The main microcontroller used to control LEDs, buttons, and OLED |
-| **LEDs (x3)** | Visual indicators for different modes and button feedback |
-| **Buttons (Mode, Reset)** | Used to switch between LED modes and reset the system |
-| **Buzzer** | Optional alert indicator |
-| **OLED Display (SSD1306)** | Displays the current LED operation mode |
-| **Arduino IDE** | Platform used for coding, compiling, and uploading firmware |
+| **Component** | **ESP32 Pin** | **Description** |
+|----------------|---------------|-----------------|
+| **LED 1** | **GPIO 18** | Controls the first LED; used for ON/OFF, blinking, and PWM modes |
+| **LED 2** | **GPIO 17** | Works with LED1 for alternate blinking and fade effects |
+| **LED 3** | **GPIO 16** | Used as an indicator (feedback LED) during button press events |
+| **Mode Button** | **GPIO 34** | Cycles between LED modes (BOTH OFF, ALT BLINK, BOTH ON, PWM FADE) |
+| **Reset Button** | **GPIO 35** | Resets all LEDs to OFF state regardless of mode |
+| **Buzzer** | **GPIO 25** | Provides sound feedback or can be extended for alerts |
+| **OLED SDA** | **GPIO 21** | I²C data line for OLED display communication |
+| **OLED SCL** | **GPIO 22** | I²C clock line for OLED display communication |
+| **VCC** | **3.3V** | Power supply for OLED and connected components |
+| **GND** | **GND** | Common ground connection for all peripherals |
 
 ---
 
